@@ -21,4 +21,7 @@ counts_totalgenesum = counts.sum(axis=1)
 counts_totalgenesum.head()
 counts_totalsort = counts_totalgenesum.sort_values(ascending=False)
 counts_totalsort.to_csv('/home/users/yzhiyuan/workspace/learning/counts_totalsort.tsv', sep='\t')
-
+a = len(counts_totalsort.iloc[counts_totalsort.nonzero()[0]])
+b = len(counts_totalsort)
+coverage = a/b
+print(coverage)
