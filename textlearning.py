@@ -17,3 +17,8 @@ counts_sort_onesample = counts.sort_values(by = ['M109Barcode_704-508'])
 counts_sort_onesample.head()
 counts_sort_onesample_R = counts.sort_values(by = ['M109Barcode_704-508'], ascending=False)
 counts_sort_onesample_R.head()
+counts_totalgenesum = counts.sum(axis=1)
+counts_totalgenesum.head()
+counts_totalsort = counts_totalgenesum.sort_values(ascending=False)
+counts_totalsort.to_csv('/home/users/yzhiyuan/workspace/learning/counts_totalsort.tsv', sep='\t')
+
