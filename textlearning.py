@@ -25,3 +25,10 @@ a = len(counts_totalsort.iloc[counts_totalsort.nonzero()[0]])
 b = len(counts_totalsort)
 coverage = a/b
 print(coverage)
+columnsum = counts.sum() #Here I tried to sum columns and turned it to a DataFrame
+a = columnsum.sort_values() 
+saber = a.to_frame(name='sum')
+b = counts.mean()        # Tried to mean and added to sum DataFrame
+c = b.sort_values()
+saber['mean'] = c.to_frame()
+saber.columns
